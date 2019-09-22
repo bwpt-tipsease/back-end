@@ -5,9 +5,9 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('places').insert([
-        {place_name: 'Restaurant'},
-        {place_name: 'Car Wash'},
-        {place_name: 'Salon'}
+        {place: 'Restaurant'},
+        {place: 'Car Wash'},
+        {place: 'Salon'}
       ]);
     });
 };
