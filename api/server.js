@@ -11,6 +11,6 @@ server.use(helmet());
 server.use(cors());
 server.use(express.json());
 
-server.use('./api/places', PlacesRouter);
+server.use('/api/places', PlacesRouter);
 
 module.exports = server;
