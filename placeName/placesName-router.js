@@ -1,6 +1,6 @@
 const express = require('express');
 
-const PlacesName = require('./places-model')
+const PlacesName = require('./placesName-model')
 
 const router = express.Router();
 
