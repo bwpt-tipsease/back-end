@@ -3,7 +3,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 require('dotenv').config();
 
-const WorkersRouter = require('../workers/workers-router')
+const PlacesRouter = require('../places/places-router')
 
 const server = express();
 
@@ -11,6 +11,6 @@ server.use(helmet());
 server.use(cors());
 server.use(express.json());
 
-server.use('./api/workers', WorkersRouter);
+server.use('./api/places', PlacesRouter);
 
 module.exports = server;

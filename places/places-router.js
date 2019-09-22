@@ -9,24 +9,24 @@ module.exports = {
 };
 
 function find() {
-    return db('workers')
+    return db('')
 }
 
 function findById(id) {
-    return db('workers').where({ id }).first();
+    return db('places').where({ id }).first();
 }
 
-function add(worker) {
-    return db('workers').insert(worker)
+function add(place) {
+    return db('places').insert(place)
     .then(ids => {
         return findById(ids[0])
     });
 }
 
 function update(id, changes) {
-    return db('workers').where({ id }).update(changes);
+    return db('places').where({ id }).update(changes);
 }
 
 function remove(id) {
-    return db('workers').where({ id }).del()
+    return db('places').where({ id }).del()
 }
