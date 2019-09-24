@@ -21,6 +21,6 @@ exports.up = function(knex) {
 exports.down = function(knex) {
   return knex.schema
     .dropTableIfExists('serviceWorkers')
-    .dropTableIfExists('place_name')
+    .dropTableIfExists('places_name')
     .dropTableIfExists('places')
 };
