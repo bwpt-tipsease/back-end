@@ -6,12 +6,11 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     PlacesName.find()
-    .then(PlacesName => {
-        console.log(PlacesName)
-        res.json(PlacesName);
+    .then(placesName => {
+        res.json({placesName});
     })
     .catch (err => {
-        res.status(500).json({ message: 'Failed to get places.' });
+        res.status(500).json({ message: err.message });
     });
 });
 
@@ -19,10 +18,10 @@ router.get('/:id', (req, res) => {
     const { id } = req.params;
 
     PlacesName.findById(id)
-    .then(PlaceName => {
+    .then(placeName => {
 
-        if (PlaceName) {
-            res.json(PlaceName);
+        if (placeName) {
+            res.json(placeName);
         } else {
             res.status(404).json({ message: 'Could not find Place Name with given id.' })
         }
