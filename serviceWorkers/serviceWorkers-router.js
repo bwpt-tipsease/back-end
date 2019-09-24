@@ -20,7 +20,7 @@ router.get('/:id', (req, res) => {
     ServiceWorkers.findById(id)
     .then(serviceWorker => {
 
-        if (place) {
+        if (serviceWorker) {
             res.json(serviceWorker);
         } else {
             res.status(404).json({ message: 'Could not find Service Worker with given id.' })
