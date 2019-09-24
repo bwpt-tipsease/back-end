@@ -33,7 +33,7 @@ module.exports = {
       tableName: 'knex_migrations',
     },
     seeds: {
-      directory: './database/seeds/production',
+      directory: './database/seeds',
     },
     useNullAsDefault: true,
   },
