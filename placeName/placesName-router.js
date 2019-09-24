@@ -7,6 +7,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     PlacesName.find()
     .then(PlacesName => {
+        console.log(PlacesName)
         res.json(PlacesName);
     })
     .catch (err => {
