@@ -10,7 +10,7 @@ exports.seed = function(knex) {
 
         {place: 'Salon'},
 
-        {plcae: 'Automobile repair shop'}
+        {place: 'Automobile repair shop'}
       ]);
     });
 };
