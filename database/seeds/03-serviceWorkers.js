@@ -6,21 +6,21 @@ exports.seed = function(knex) {
       // Inserts seed entries
       return knex('serviceWorkers').insert([
         // RESTAURANT
-        {worker_name: 'Kynan Simmons', description: "Attendent at McDonald's"},
-        {worker_name: 'Alanna Conley', description: "Attendent at McDonald's"},
-        {worker_name: 'Sara Boyer', description: "Attendent at McDonald's"},
+        {worker_name: 'Kynan Simmons', description: "Attendent at McDonald's", photo:'https://airyougotravels.com/wp-content/uploads/2016/06/2X2-PICTURE-CITY.jpg'},
+        {worker_name: 'Alanna Conley', description: "Attendent at McDonald's", photo: 'https://visafoto.com/img/docs/zz_2x2_1mb.jpg'},
+        {worker_name: 'Sara Boyer', description: "Attendent at McDonald's", photo: 'https://airyougotravels.com/wp-content/uploads/2016/08/2x2.jpg'},
 
-        {worker_name: 'Emilis Villalobos', description: "Bartender at McDonald's"},
-        {worker_name: 'Kevin Fletcher', description: "Bartender at McDonald's"},
-        {worker_name: 'Maggie Dunn', description: "Bartender at McDonald's"},
+        {worker_name: 'Emilis Villalobos', description: "Bartender at McDonald's", photo: 'https://ip.loszona.com/p/24fc'},
+        {worker_name: 'Kevin Fletcher', description: "Bartender at McDonald's", photo: 'https://images.youracclaim.com/images/213cc873-62b8-45c4-964c-47af085374c2/2x2%2BType%2B3.jpg'},
+        {worker_name: 'Maggie Dunn', description: "Bartender at McDonald's", photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ68yPmtH6CBiYiZw0DFLDc17UErfn6vtdXUw3YXH9Q4dcUZIqr'},
 
-        {worker_name: 'Elly Cervantes', description: "Server at McDonald's"},
-        {worker_name: 'Alanna Conley', description: "Server at McDonald's"},
-        {worker_name: 'Josiah Hill', description: "Server at McDonald's"},
+        {worker_name: 'Elly Cervantes', description: "Server at McDonald's", photo: 'https://nanceedreams.files.wordpress.com/2015/05/student-id-2x2-pic1.jpg'},
+        {worker_name: 'Alanna Conley', description: "Server at McDonald's", photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAcueNuFxkRDwgHu9yOQnBrl2J_BasVDmAC3qRHq-Fr-zuvguB'},
+        {worker_name: 'Josiah Hill', description: "Server at McDonald's", photo: 'https://i.pinimg.com/originals/31/af/88/31af882efb16e3f8f589ccf0afa2354a.jpg'},
 
-        {worker_name: 'Kristy Dickerson', description: "Attendent at Burger King"},
-        {worker_name: 'Naya Burton', description: "Attendent at Burger King"},
-        {worker_name: 'Cheryl Woodard', description: "Attendent at Burger King"},
+        {worker_name: 'Kristy Dickerson', description: "Attendent at Burger King", photo: 'https://image.shutterstock.com/image-photo/close-young-handsome-charming-caucasian-260nw-753489874.jpg'},
+        {worker_name: 'Naya Burton', description: "Attendent at Burger King", photo: 'https://image.shutterstock.com/image-photo/passport-photo-portrait-asian-smiling-260nw-1045734418.jpg'},
+        {worker_name: 'Cheryl Woodard', description: "Attendent at Burger King", photo:'https://previews.123rf.com/images/ryanking999/ryanking9991502/ryanking999150200164/37043282-beaut%C3%A9-concept-de-soins-de-la-peau-le-visage-belle-femme-sourire-avec-des-dents-de-la-sant%C3%A9-et-les-cheve.jpg'},
 
         {worker_name: 'Dulcie Mill', description: "Bartender at Burger King"},
         {worker_name: 'Meg Robbins', description: "Bartender at Burger King"},
