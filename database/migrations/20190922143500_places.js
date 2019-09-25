@@ -8,5 +8,8 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTableIfExists('places')
+  return knex.schema
+    .dropTableIfExists('serviceWorkers')
+    .dropTableIfExists('PlacesName')
+    .dropTableIfExists('places')
 };
