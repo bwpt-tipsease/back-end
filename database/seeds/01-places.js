@@ -5,8 +5,12 @@ exports.seed = function(knex) {
       // Inserts seed entries
       return knex('places').insert([
         {place: 'Restaurant'},
+
         {place: 'Car Wash'},
-        {place: 'Salon'}
+
+        {place: 'Salon'},
+
+        {plcae: 'Automobile repair shop'}
       ]);
     });
 };
