@@ -5,7 +5,7 @@ exports.up = function(knex) {
         tbl.string('worker_name', 128).notNullable();
         tbl.string('photo');
         tbl.string('description');
-        tbl.string('date');
+        tbl.date('start_date').notNullable();
     })
 };
 
