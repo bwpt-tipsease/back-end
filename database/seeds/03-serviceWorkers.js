@@ -110,7 +110,7 @@ exports.seed = function(knex) {
 
         {worker_name: 'Mathew Hull', description: "Hair Dresser at Mercedes Beauty Salon", start_date: '2015-09-11', tagline: 'Bring out the Hair Dresser!',photo: "http://www.hawkerscholarship.org/media/images/scholars/CameronAllan.jpg"},
         {worker_name: 'Tyrique Cousins', description: "Hair Dresser at Mercedes Beauty Salon", start_date: '1999-03-30', tagline: 'The Better way to Hair Dresser.',photo: "https://0.academia-photos.com/13734411/3964146/11107744/s200_gustavo.matiuzzi_de_souza.jpg"},
-        {worker_name: 'Marina Barrett', description: "Hair Dresser at Mercedes Beauty Salon", start_date: '2009-04-34', tagline: 'Hair Dresser, because, simple is awesome!',photo: "https://jamshrsolutions.com/upload/profile/1446276068-_MG_2542%20%202X2.jpg"},
+        {worker_name: 'Marina Barrett', description: "Hair Dresser at Mercedes Beauty Salon", start_date: '2009-04-23', tagline: 'Hair Dresser, because, simple is awesome!',photo: "https://jamshrsolutions.com/upload/profile/1446276068-_MG_2542%20%202X2.jpg"},
         
         {worker_name: 'Kimberly Mills', description: "Nails at Mercedes Beauty Salon", start_date: '2015-05-26', tagline: 'Nails - Think Big.',photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2UQ8NShZaf-tA727n29R1cz58AZRitxoPjXrLVwi1vqh8ppAN"},
         {worker_name: 'Taylan Hastings', description: "Nails at Mercedes Beauty Salon", start_date: '2013-05-27', tagline: 'Nails, The Perfect Experience.',photo: "http://2015.igem.org/wiki/images/2/2a/Team_Sherbrooke_Photo_Robitaille.jpg"},
