@@ -6,7 +6,7 @@ const router = express.Router();
 
 const restricted = require('../auth/authenticate-middleware')
 
-router.get('/', (req, res) => {
+router.get('/', restricted, (req, res) => {
     ServiceWorkers.find()
     .then(ServiceWorkers => {
         res.json(ServiceWorkers);
