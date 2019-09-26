@@ -17,14 +17,14 @@ function findById(id) {
 }
 
 function add(place) {
-    return db('PlacesName').insert(place)
+    return db('PlacesName').returning('id').insert(place)
     .then(ids => {
         return findById(ids[0])
     });
 }
 
 function update(id, changes) {
-    return db('PlacesName').where({ id }).update(changes);
+    return db('PlacesName').where({ id }).returning('*').update(changes);
 }
 
 function remove(id) {
