@@ -25,7 +25,8 @@ router.post('/upload', async (req, res) => {
             },
             (err, result) => {
             if (err) throw new Error();
-            const updated = await db('users').where({ id }).returning('*').update({ photo: result.eager[0].url });
+            const user = await db('users').where({ id }).first();
+            const updated = await db('serviceWorkers').where({ 'id': user.service_worker_id }).returning('*').update({ photo: result.eager[0].url });
             res.status(201).json({ updated });
         });
     } catch(err) {
