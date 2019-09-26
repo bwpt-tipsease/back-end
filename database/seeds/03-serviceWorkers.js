@@ -82,7 +82,7 @@ exports.seed = function(knex) {
         // SALON
         {worker_name: 'Ewen Hogan', description: "Attendent at Princes Nail", start_date: '2015-09-27', tagline: 'Attendant, Enjoy this moment.',photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8E9XONqlmKpZM3iqDFtbMw8euBnxbkaZi5UUCiBabidb0154-"},
         {worker_name: 'Vivian Corona', description: "Attendent at Princes Nail", start_date: '2009-09-23', tagline: 'Attendant - Power, beauty and soul.',photo: "https://www.fotostudio-lichtmalerei-muenchen.de/wp-content/uploads/2012/02/bild-fuer-visum.jpg"},
-        {worker_name: 'Martine Hurst', description: "Attendent at Princes Nail", start_date: '1999-19-25', tagline: 'Attendant - There is No Substitute.',photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm5VOEra1f2mtwRQn-B9GNfiCHMw8CneUXigZ0f9phgR4wW17e"},
+        {worker_name: 'Martine Hurst', description: "Attendent at Princes Nail", start_date: '1999-09-25', tagline: 'Attendant - There is No Substitute.',photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm5VOEra1f2mtwRQn-B9GNfiCHMw8CneUXigZ0f9phgR4wW17e"},
 
         {worker_name: 'Ebrahim Dodd', description: "Hair Dresser at Princes Nail", start_date: '2016-09-12', tagline: 'And all because she loves Hair Dresser.', photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO7Pa0OJTI7VqLTiYSjhj6rLd1ncYLLuxp_MAA01ntnUwdyIIm"},
         {worker_name: 'Damien Mair', description: "Hair Dresser at Princes Nail", start_date: '1999-09-23', tagline: 'Hair Dresser, Get up and go.',photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRETs_0VrPmE_b5Co0yN_DSdH_dVRCjIOyjOLrnN5SV1Fe2C4ir"},
