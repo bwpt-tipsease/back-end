@@ -131,7 +131,7 @@ exports.seed = function(knex) {
 
         {worker_name: 'Gloria Morales', description: 'Mechanic at B K Auto Body Workshop', start_date: '1999-09-07', photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-15F19Ti8PJOAoc1tuoIozRqCG_fDqmCpeMPcGK2ovCMXldqu"},
         {worker_name: 'Nolan Cannon', description: 'Mechanic at B K Auto Body Workshop', start_date: '1999-09-07', photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS00TzmSrrURhbkzNwewwyRP1TcSS3KNWLPusPqzjHXY_OFgXQ3"},
-        {worker_name: 'Antoine Li', description: 'Mechanic at B K Auto Body Workshop', start_date: '', photo: "https://0.academia-photos.com/2099609/684053/848974/s200_jonathan.malicsi.jpg"},
+        {worker_name: 'Antoine Li', description: 'Mechanic at B K Auto Body Workshop', start_date: '1999-09-07', photo: "https://0.academia-photos.com/2099609/684053/848974/s200_jonathan.malicsi.jpg"},
 
         {worker_name: 'Cathal Finney', description: 'Attendent at Yunior Auto Repair', start_date: '1999-09-07', photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgtY5WaKm75PnygflASfBz633MF9mmxyyAlIXExX9WDQIDZtDK"},
         {worker_name: 'Afsana Mcneil', description: 'Attendent at Yunior Auto Repair', start_date: '1999-09-07', photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrHotGZudCF8u3Ru9LkKztIvDD06eFCbANRAfpAiG0CSYvZnS_"},
