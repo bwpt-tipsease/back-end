@@ -8,6 +8,7 @@ const authRouter = require('../auth/auth-router');
 const PlacesRouter = require('../places/places-router')
 const PlacesNameRouter = require('../placeName/placesName-router')
 const ServiceWorkers = require('../serviceWorkers/serviceWorkers-router')
+const Users = require('../users/users-router');
 
 const server = express();
 
@@ -19,6 +20,7 @@ server.use('/api/auth', authRouter);
 server.use('/api/places', PlacesRouter);
 server.use('/api/placesname', PlacesNameRouter);
 server.use('/api/serviceworkers', ServiceWorkers)
+server.use('/api/users', Users);
 server.use(express.static(__dirname + '/../client/build/'));
 
 module.exports = server;
