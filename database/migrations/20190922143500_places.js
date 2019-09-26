@@ -1,15 +1,16 @@
 
 
 exports.up = function(knex) {
-  return knex.schema.createTable('places', tbl => {
+  return knex.schema.createTableIfNotExists('places', tbl => {
     tbl.increments();
     tbl.string('place', 128).notNullable();
+  })
+    .createTable('PlacesName',  tbl => {
+    tbl.increments();
+    tbl.string('place_name', 128).notNullable();
   })
 };
 
 exports.down = function(knex) {
-  return knex.schema
-    .dropTableIfExists('serviceWorkers')
-    .dropTableIfExists('PlacesName')
-    .dropTableIfExists('places')
+  return knex.schema.dropTableIfExists('places')
 };
