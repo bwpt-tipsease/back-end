@@ -5,15 +5,13 @@ const jwt = require('jsonwebtoken');
 const Users = require('./users-model');
 
 router.post('/register', (req, res) => {
-  let user = req.body;
+  let user = req.body; 
   const hash = bcrypt.hashSync(user.password, 10);
   user.password = hash;
   let { email, password } = req.body;
-
   Users.add(user)
     .then(saved => {
       if (email && password) {
-
         const token = generateToken(saved)
         res.status(201).json({
           user: saved,
