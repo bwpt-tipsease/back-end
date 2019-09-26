@@ -10,6 +10,7 @@ exports.up = function(knex) {
               .notNullable()
               .unique();
             users.string('password', 255).notNullable();
+            users.integer('service_worker_id').references('id').inTable('serviceWorkers').unsigned().defaultTo(null);
           });
         }
       });

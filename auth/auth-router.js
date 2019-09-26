@@ -1,14 +1,26 @@
 const router = require('express').Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const ServiceWorkers = require('../serviceWorkers/serviceWorkers-model');
 
 const Users = require('./users-model');
 
 router.post('/register', (req, res) => {
-  let user = req.body;
+  let { username, password, worker_name, description, start_date } = req.body;
   const hash = bcrypt.hashSync(user.password, 10);
   user.password = hash;
-
+  if (start_date){
+    // If user entered information to register as a service worker, 
+    // add to serviceWorkers first and then store ID on users table.
+    ServiceWorkers.add({ worker_name, description, start_date })
+      .then(res => Users.add({ username, password, service_worker_id: res.id }))
+      .then(user => {
+        const token = generateToken(user);
+        return res.status(201).json({ user, token });
+      });
+  }
+  // If user did not enter service worker information, the above code 
+  // will not execute, and we can just add to users table.
   Users.add(user)
     .then(saved => {
       const token = generateToken(saved)
