@@ -8,7 +8,7 @@ exports.seed = function(knex) {
         // RESTAURANT
         {worker_name: 'Kynan Simmons', description: "Attendent at McDonald's", start_date: '2000-09-30', tagline: 'Attendant has a better idea.', photo:'https://airyougotravels.com/wp-content/uploads/2016/06/2X2-PICTURE-CITY.jpg'},
         {worker_name: 'Alanna Conley', description: "Attendent at McDonald's", start_date: '2018-04-07', tagline: 'Attendant is full of joy!', photo: 'https://visafoto.com/img/docs/zz_2x2_1mb.jpg'},
-        {worker_name: 'Sara Boyer', description: "Attendent at McDonald's", start_date: '1999-02-30' , tagline: 'Attendant, optimized for speed.', photo: 'https://airyougotravels.com/wp-content/uploads/2016/08/2x2.jpg'},
+        {worker_name: 'Sara Boyer', description: "Attendent at McDonald's", start_date: '2018-04-07' , tagline: 'Attendant, optimized for speed.', photo: 'https://airyougotravels.com/wp-content/uploads/2016/08/2x2.jpg'},
 
         {worker_name: 'Emilis Villalobos', description: "Bartender at McDonald's", start_date: '2010-04-12', tagline: 'Welcome to Bartender world!', photo: 'http://mariestella41.com/wp-content/uploads/DSC_3913-2x2-300x300.jpg'},
         {worker_name: 'Kevin Fletcher', description: "Bartender at McDonald's", start_date: '2017-07-07', tagline: 'Let the Bartender work for you.', photo: 'https://images.youracclaim.com/images/213cc873-62b8-45c4-964c-47af085374c2/2x2%2BType%2B3.jpg'},
