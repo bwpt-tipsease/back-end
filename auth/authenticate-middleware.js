@@ -17,7 +17,7 @@ module.exports = (req, res, next) => {
 
   } else {
     res.status(400).json({
-      message: `This is token: ${req.headers}`
+      message: `This is token: ${JSON.stringify(req.headers)}`
     });
   }
 };
