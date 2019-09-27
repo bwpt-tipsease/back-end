@@ -52,6 +52,7 @@ router.put('/balance/:id', async (req, res) => {
         const worker = await ServiceWorkers.findById(service_worker_id);
         const prevBalance = worker.balance;
         ServiceWorkers.update(service_worker_id, prevBalance + tip);
+        return res.json({ success: 'Balance successfully updated.' });
     } catch(err) {
         switch(err.message){
             case '400':
