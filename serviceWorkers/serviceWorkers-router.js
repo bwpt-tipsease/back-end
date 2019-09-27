@@ -47,11 +47,12 @@ router.post('/', (req, res) => {
 
 router.put('/balance/:id', async (req, res) => {
     try {
-        const { tip, service_worker_id } = req.body;
-        if (!tip || !service_worker_id) throw new Error(400);
-        const worker = await ServiceWorkers.findById(service_worker_id);
+        const { tip } = req.body;
+        const { id } = req.params;
+        if (!tip || !id) throw new Error(400);
+        const worker = await ServiceWorkers.findById(id);
         const prevBalance = worker.balance;
-        ServiceWorkers.update(service_worker_id, prevBalance + tip);
+        ServiceWorkers.update(id, prevBalance + tip);
         return res.json({ success: 'Balance successfully updated.' });
     } catch(err) {
         switch(err.message){
