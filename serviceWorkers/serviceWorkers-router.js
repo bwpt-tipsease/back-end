@@ -45,6 +45,23 @@ router.post('/', (req, res) => {
     });
 });
 
+router.put('/balance/:id', async (req, res) => {
+    try {
+        const { tip, service_worker_id } = req.body;
+        if (!tip || !service_worker_id) throw new Error(400);
+        const worker = await ServiceWorkers.findById(service_worker_id);
+        const prevBalance = worker.balance;
+        ServiceWorkers.update(service_worker_id, prevBalance + tip);
+    } catch(err) {
+        switch(err.message){
+            case '400':
+                return res.status(400).json({ error: 'Request must include tip and service_worker_id keys.'});
+            default:
+                return res.status(500).json({ error: 'There was an error while attempting to update balance.' });
+        }
+    }
+});
+
 router.put('/:id', (req, res) => {
     const { id } = req.params;
     const changes = req.body;
