@@ -2,7 +2,6 @@ const jwt = require('jsonwebtoken');
 
 module.exports = (req, res, next) => {
   const token = req.headers.authorization;
-
   if (token) {
     jwt.verify(token, process.env.JWT_SECRET, (err, decodedToken) => {
       if (err) {
@@ -18,7 +17,7 @@ module.exports = (req, res, next) => {
 
   } else {
     res.status(400).json({
-      message: `This is token: ${token}`
+      message: `This is token: ${req.headers}`
     });
   }
 };
