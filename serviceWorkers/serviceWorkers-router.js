@@ -6,7 +6,7 @@ const router = express.Router();
 
 const restricted = require('../auth/authenticate-middleware')
 
-router.get('/', (req, res) => {
+router.get('/', restricted, (req, res) => {
     ServiceWorkers.find()
     .then(ServiceWorkers => {
         res.json(ServiceWorkers);
@@ -43,6 +43,25 @@ router.post('/', (req, res) => {
     .catch(err => {
         res.status(500).json({ message: 'Failed to create new Service Worker.' })
     });
+});
+
+router.put('/balance/:id', async (req, res) => {
+    try {
+        const { tip } = req.body;
+        const { id } = req.params;
+        if (!tip || !id) throw new Error(400);
+        const worker = await ServiceWorkers.findById(id);
+        const prevBalance = worker.balance;
+        ServiceWorkers.update(id, prevBalance + tip);
+        return res.json({ success: 'Balance successfully updated.' });
+    } catch(err) {
+        switch(err.message){
+            case '400':
+                return res.status(400).json({ error: 'Request must include tip and service_worker_id keys.'});
+            default:
+                return res.status(500).json({ error: 'There was an error while attempting to update balance.' });
+        }
+    }
 });
 
 router.put('/:id', (req, res) => {

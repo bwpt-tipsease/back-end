@@ -8,14 +8,20 @@ router.post('/register', (req, res) => {
   let user = req.body;
   const hash = bcrypt.hashSync(user.password, 10);
   user.password = hash;
+  let { email, password } = req.body;
 
   Users.add(user)
     .then(saved => {
-      const token = generateToken(saved)
-      res.status(201).json({
-        user: saved,
-        token
-      });
+      if (email && password) {
+
+        const token = generateToken(saved)
+        res.status(201).json({
+          user: saved,
+          token
+        });
+      }else {
+        res.status(404).json({ message: 'Please insert a email and a password' })
+      }
     })
     .catch(error => {
       res.status(500).json(error);
@@ -23,16 +29,16 @@ router.post('/register', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
-  let { username, password } = req.body;
+  let { email, password } = req.body;
 
-  Users.findBy({ username })
+  Users.findBy({ email })
     .first()
     .then(user => {
       if (user && bcrypt.compareSync(password, user.password)) {
         const token = generateToken(user);
 
         res.status(200).json({
-          message: `Welcome ${user.username}!`,
+          message: `Welcome ${user.email}!`,
           token
         });
       } else {
@@ -47,7 +53,7 @@ router.post('/login', (req, res) => {
 function generateToken(user) {
   const payload = {
     sub: user.id,
-    username: user.username
+    email: user.email
   };
 
   const options = {
